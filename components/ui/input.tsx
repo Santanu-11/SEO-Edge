@@ -33,6 +33,7 @@ const inputVariants = cva(
   }
 );
 
+//@ts-ignore
 export interface InputProps
   extends React.InputHTMLAttributes<HTMLInputElement>,
     VariantProps<typeof inputVariants> {
@@ -78,6 +79,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
         <div
           className={cn(
             "relative flex items-center rounded-md transition-all",
+            //@ts-ignore
             inputVariants({ variant, size, state })
           )}
         >

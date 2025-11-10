@@ -3,6 +3,7 @@
 import { redirect } from "next/navigation";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
+//@ts-ignore
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
 

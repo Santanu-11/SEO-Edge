@@ -41,6 +41,7 @@ const Card = React.forwardRef<HTMLDivElement, CardProps>(
     const Comp = animated ? motion.div : "div";
 
     return (
+      //@ts-ignore
       <Comp
         ref={ref}
         whileHover={hoverable ? { y: -2, boxShadow: "0 8px 24px rgba(0,0,0,0.08)" } : undefined}

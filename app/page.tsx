@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { SeoForm } from "@/components/seo-form";
 import { BarChart3, Globe2, Rocket, Sparkles } from "lucide-react";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 export default function Home() {
   return (
@@ -93,6 +94,8 @@ export default function Home() {
 }
 
 /* Subtle floating sparkles for depth and polish */
+
+// app/page.tsx
 function SparklesBackground() {
   return (
     <div className="absolute inset-0 overflow-hidden -z-10">
@@ -106,10 +109,7 @@ function SparklesBackground() {
             top: `${Math.random() * 100}%`,
             left: `${Math.random() * 100}%`,
           }}
-          animate={{
-            y: [0, -10, 0],
-            opacity: [0.3, 0.6, 0.3],
-          }}
+          animate={{ y: [0, -10, 0], opacity: [0.3, 0.6, 0.3] }}
           transition={{
             duration: Math.random() * 4 + 3,
             repeat: Infinity,
@@ -120,3 +120,4 @@ function SparklesBackground() {
     </div>
   );
 }
+
